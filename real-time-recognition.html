@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI SignBridge// AI Sign Language Translator</title>
+  <link rel="stylesheet" href="styles/real-time-recognition.css">
+</head>
+<body>
+  <h2>AI SignBridge// AI Sign Language Translator</h2>
+  <div id="main-container">
+    <div id="camera-container">
+      <canvas id="camera-feed"></canvas>
+    </div>
+    <div id="controls-panel">
+      <button class="control-btn" id="toggleVoice">Voice: ON</button>
+      <button class="control-btn" id="toggleCaptions">Text: ON</button>
+      <button class="control-btn" id="toggleCamera">Camera: ON</button>
+    </div>
+    <div id="text-captions-display">
+      <div class="data-box">
+        <h3>Current Letter</h3>
+        <span id="current-letter">-</span>
+      </div>
+      <div class="data-box">
+        <h3>Word in Progress</h3>
+        <span id="current-word-display">-</span>
+      </div>
+    </div>
+    <div id="keyboard-panel">
+      <input type="text" id="keyboard-input" placeholder="Type here to speak...">
+      <div>
+        <button class="control-btn" id="speakBtn">Speak</button>
+        <button class="control-btn" id="clearBtn">Clear</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js"></script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
+  <script src="scripts/real-time-recoginition.js"></script>
+</body>
+</html>
