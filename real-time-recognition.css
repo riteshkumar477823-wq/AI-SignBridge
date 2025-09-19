@@ -1,0 +1,119 @@
+:root {
+      --primary-color: #00bcd4;
+      --secondary-color: #1a237e;
+      --text-color: #e0f7fa;
+      --bg-color: #0d1226;
+      --font-mono: 'Roboto Mono', 'Courier New', monospace;
+    }
+    body {
+      margin: 0;
+      font-family: var(--font-mono);
+      background: var(--bg-color);
+      color: var(--text-color);
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      overflow: hidden;
+      padding: 10px;
+    }
+    h2 {
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 1.5em;
+      margin-top: 10px;
+      text-shadow: 0 0 5px var(--primary-color);
+    }
+    #main-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      max-width: 900px;
+      padding: 10px;
+    }
+    #camera-container {
+      position: relative;
+      width: 90%;
+      max-width: 300px;
+      aspect-ratio: 3/4;  /* keeps vertical orientation */
+      margin: 0 auto;
+      border: 2px solid var(--primary-color);
+      border-radius: 12px;
+      box-shadow: 0 0 20px 5px rgba(0, 188, 212, 0.4);
+      background: var(--secondary-color);
+    }
+    #camera-feed {
+      display: block;
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+      transform: scaleX(-1);
+    }
+    #controls-panel {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+    .control-btn {
+      background: var(--primary-color);
+      color: var(--secondary-color);
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-family: var(--font-mono);
+      font-size: 0.9em;
+      transition: background-color 0.3s, transform 0.1s;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+    .control-btn:hover {
+      background: #00e5ff;
+      transform: scale(1.05);
+    }
+    .data-box {
+      background: rgba(0, 188, 212, 0.1);
+      border: 1px solid var(--primary-color);
+      padding: 10px;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(0, 188, 212, 0.3);
+      margin-top: 15px;
+      min-width: 250px;
+    }
+    .data-box h3 {
+      margin: 0;
+      font-size: 0.9em;
+      text-transform: uppercase;
+    }
+    .data-box span {
+      font-size: 1.5em;
+      font-weight: bold;
+      text-shadow: 0 0 5px var(--text-color);
+      word-wrap: break-word;
+    }
+    #keyboard-panel {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 20px;
+      width: 100%;
+    }
+    #keyboard-input {
+      width: 90%;
+      max-width: 500px;
+      padding: 10px;
+      border-radius: 5px;
+      border: 2px solid var(--primary-color);
+      background: var(--secondary-color);
+      color: var(--text-color);
+      font-family: var(--font-mono);
+      font-size: 1em;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
